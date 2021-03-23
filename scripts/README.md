@@ -1,3 +1,21 @@
+### ciconfig.sh示例
+```
+#子级的git库对应区分module和vendor两个文件夹
+TopFoldName=()
+#对应文件夹名称数组，与git库的名称必须保持一致
+FoldName=()
+#git库url数组名
+GitPath=()
+#git库对应的tag，如果是master则置空不填
+RefName=()
+
+LastIndex=${#FoldName[*]}+1;
+TopFoldName[LastIndex]="vendor"
+FoldName[LastIndex]="iflyMSC"
+GitPath[LastIndex]="git@192.168.2.246:mobile-thirdparty/iflyMSC.git"
+RefName[LastIndex]="tag_1173"
+```
+
 ### 使用方法
 
 在 pipeline 脚本中，请使用如下方式执行脚本
